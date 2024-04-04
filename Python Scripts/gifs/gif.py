@@ -3,7 +3,7 @@ from PIL import Image
 
 
 
-#Th
+#Thi
 root = tk.Tk()
 file = "gifs\\i5.gif"
 
