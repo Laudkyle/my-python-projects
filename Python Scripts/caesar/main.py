@@ -3,7 +3,7 @@
 # print(list(word))
 
 # dictionary = list("abcdefghijklmnopqrstuvwxyz")
-# pri
+# p
 
 def caesar(word, num):
     new_word=[]
