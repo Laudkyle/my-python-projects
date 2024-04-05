@@ -2,7 +2,7 @@
 # Making the word in to a list
 # print(list(word))
 
-# dictionary = list("abcdefghijklmnopqrstuvwxyz")
+# dictionary= list("abcdefghijklmnopqrstuvwxyz")
 # print(dict
 
 def caesar(word, num):
