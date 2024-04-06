@@ -19,7 +19,6 @@ for  q in range(numb_questions):
 	qset.append(question)
 
 # Reading the question list	
-#print(line)
 questions = int(input('How many questions do you need : '))
 print(line)
 print("QUESTIONS")
