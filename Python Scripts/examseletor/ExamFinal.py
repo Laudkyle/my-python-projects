@@ -31,7 +31,7 @@ for  q in range(numb_questions):
 	qset.append(question)
 	
 # Questions printer
-
+print(line)
 questions = int(input('How many question do you want to set : '))
 print(line)
 print("QUESTIONS")
