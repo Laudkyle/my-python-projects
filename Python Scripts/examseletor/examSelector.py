@@ -1,4 +1,4 @@
-# Random  Questions FOr exams 
+# Random  Questions FOr exams/quizzes
 import random
 
 qset =[]
