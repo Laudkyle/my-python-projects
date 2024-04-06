@@ -1,4 +1,4 @@
-# Random  Questions selector
+# Random  Questions
 import random
 
 class quest:
