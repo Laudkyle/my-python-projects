@@ -1,4 +1,4 @@
-# Random exam question
+# Random exam question selector
 import random
 
 class quest:
@@ -15,7 +15,7 @@ qset =[]
 qset1 =[]
 marks = 0
 line = "------------------------------------------------"
-numb_questions= int(input("What is the total number of questions : "))
+numb_questions= int(input("What is the total number of exam questions : "))
 
 # Defining the random question selector function
 def qselector(list):
