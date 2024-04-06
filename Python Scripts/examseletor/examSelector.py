@@ -20,7 +20,6 @@ for  q in range(numb_questions):
 
 # Reading the question list	
 #print(line)
-#print("QUESTION SET")
 
 questions = int(input('How many questions do you need : '))
 print(line)
