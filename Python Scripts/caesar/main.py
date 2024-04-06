@@ -1,6 +1,6 @@
 # word = input('Word : ')
 # Making the word in to a list
-# print(list(word)
+# print(list(word
 
 # dictionary = list("abcdefghijklmnopqrstuvwxyz")
 
