@@ -42,7 +42,7 @@ for i in range(questions):
 	qset1.append(q)
 	print()
 	
-# Answer collection
+# Answer collections
 print(line)
 print("ANSWERS")
 print(line)
