@@ -26,6 +26,6 @@ questions = int(input('How many questions do you need : '))
 print(line)
 print("QUESTIONS")
 print(line)
-# Questions printer
+# Exam Questions printer
 for i in range(questions):
 	print(f"{i+1}.{qselector(qset)}")
