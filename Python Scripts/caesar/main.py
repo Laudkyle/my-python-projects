@@ -2,8 +2,6 @@
 # Making the word in to a list
 
 
-
-
 # dictionary = list("abcdefghijklmnopqrstuvwxyz")
 
 def caesar(word, num):
