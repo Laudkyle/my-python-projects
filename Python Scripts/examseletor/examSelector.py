@@ -3,7 +3,7 @@ import random
 
 qset =[]
 line = "------------------------------------------------"
-numb_questions= int(input("What is the total number of questions : "))
+numb_questions= int(input("What is the total exam number of questions : "))
 
 # Defining the random question selector function
 def qselector(list):
