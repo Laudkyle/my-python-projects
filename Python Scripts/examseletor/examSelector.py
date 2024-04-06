@@ -24,7 +24,7 @@ for  q in range(numb_questions):
 #print(line)
 #for question in qset:
 #	print(question)
-#	print()
+#	pr
 questions = int(input('How many questions do you need : '))
 print(line)
 print("QUESTIONS")
