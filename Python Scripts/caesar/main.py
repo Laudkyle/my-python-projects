@@ -1,4 +1,4 @@
-# word = in
+# word 
 # Making the word in to a list
 # dictionary = list("abcdefghijklmnopqrstuvwxyz")
 
