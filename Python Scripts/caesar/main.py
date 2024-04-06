@@ -1,4 +1,4 @@
-# word = input('Wor
+# word = input('Wo
 # Making the word in to a list
 # dictionary = list("abcdefghijklmnopqrstuvwxyz")
 
