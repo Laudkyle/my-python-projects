@@ -1,6 +1,6 @@
 import speech_recognition as sr
 import pyttsx3
-
+#starting
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id)
