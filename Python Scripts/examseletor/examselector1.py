@@ -1,4 +1,4 @@
-# Random  Questions selector
+# Random exam  Questions selector
 import random
 
 class quest:
