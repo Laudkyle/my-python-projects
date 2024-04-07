@@ -2,6 +2,7 @@ import speech_recognition as sr
 import pyttsx3
 #starting the engine
 engine = pyttsx3.init()
+# Assigning 
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id)
 engine.setProperty('rate', 150)
