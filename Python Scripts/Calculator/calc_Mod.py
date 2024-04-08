@@ -1,5 +1,5 @@
 # Creating your own modules
-#This is
+#This is the
 def add(n1, n2):
 	return n1 + n2
 	
