@@ -27,7 +27,7 @@ def qselector(list):
 for  q in range(numb_questions):
 	print()
 	print("Please add question  : ")
-	question = quest(input("Please write the question "), input("First possible answer : "), input("Second possible answer : "), input("Option for correct answer(A or B) : "))
+	question = quest(input("Please write the question "), input("First possible answer : \n"), input("Second possible answer : "), input("Option for correct answer(A or B) : "))
 	qset.append(question)
 	
 # Questions printer
