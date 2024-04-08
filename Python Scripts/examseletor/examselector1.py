@@ -15,7 +15,7 @@ qset =[]
 qset1 =[]
 marks = 0
 line = "------------------------------------------------"
-numb_questions= int(input("total number of questions : "))
+numb_questions= int(input("What is the total number of questions : "))
 
 # Defining the random question selector function
 def qselector(list):
