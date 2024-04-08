@@ -8,6 +8,6 @@ def multiply(n1, n2):
 #This is substraction function
 def substract(n1, n2):
 	return n1 - n2
-
+# Division
 def divide(n1, n2):
 	return n1 / n2
