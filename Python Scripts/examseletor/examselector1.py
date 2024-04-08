@@ -47,7 +47,7 @@ print(line)
 print("ANSWERS")
 print(line)
 for i in range(questions):
-	answer = input(f"Please input answer for question {i+1} : ")
+	answer = input(f"Please input answer for question {i+1} : \n")
 	if qset1[i].ans == answer:
 		print("CORRECT ANSWER")
 		marks += 1
