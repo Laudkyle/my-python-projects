@@ -32,7 +32,7 @@ for  q in range(numb_questions):
 	
 # Questions printer
 print(line)
-questions = int(input('How many question do you want to set : '))
+questions = int(input('How many question do you want to set : \n'))
 print(line)
 print("QUESTIONS")
 print(line)
