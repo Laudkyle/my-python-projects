@@ -7,5 +7,5 @@ def two_sum(list, target):
             if (int(i) + int(ii) == int(target)):
                 print(f"{list.index(i)},{list.index(ii)}")
     return 0
-# Tring
+# Tryng the funciton
 two_sum(list1,12)
