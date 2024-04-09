@@ -34,4 +34,6 @@ def hall_assignment(hall, cap):
 		else:
 			hall["state"] = "Empty"
 			print(f"{hall['name']} is ", hall["state"])
+   
+# Calling
 hall_assignment(halls, cap)
