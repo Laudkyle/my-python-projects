@@ -23,8 +23,10 @@ hall4 ={
 	"Capacity": int(input("Please enter the lecture  hall capacity : ")),
 	"state": "Empty"
 }
+
 cap = int(input("Please enter the capacity of thenp"))
 halls =[hall0, hall1, hall2, hall3, hall4]
+
 # Hall Assignment
 def hall_assignment(hall, cap):
 	for hall in halls:
