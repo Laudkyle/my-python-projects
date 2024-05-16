@@ -5,13 +5,13 @@ from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Load the CSV file
-file_path = 'publications.csv'  # Update with your file path
+file_path = 'publications.csv'  
 df = pd.read_csv(file_path)
 
 # Function to scrape href links
 def scrape_href(link):
     try:
-        response = requests.get(link, timeout=10)  # Added timeout for better handling
+        response = requests.get(link, timeout=10) 
         if response.status_code == 200:
             soup = BeautifulSoup(response.content, 'html.parser')
             div_tag = soup.find('div', {'id': 'gsc_oci_title'})
@@ -48,7 +48,7 @@ scraped_hrefs = scrape_links_with_progress(urls)
 df['Scraped_Links'] = scraped_hrefs
 
 # Save the updated dataframe to a new Excel file
-output_file_path = 'abstract_links.xlsx'  # Update with your desired output file path
+output_file_path = 'abstract_links.xlsx'  
 df.to_excel(output_file_path, index=False)
 
 print("Scraping completed and saved to the new Excel file.")
