@@ -7,8 +7,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 # Load the CSV file
 file_path = 'publications.csv'  # Update with your file path
 df = pd.read_csv(file_path)
-df =df.head(10)
-lit=[]
+# df =df.head(100)
 # Function to scrape href links
 def scrape_href(link):
     try:
@@ -22,7 +21,7 @@ def scrape_href(link):
                 # Find the a tag within this div
                 a_tag = div_tag.find('a', {'class': 'gsc_oci_title_link'})
                 if a_tag and 'href' in a_tag.attrs:
-                    lit.append(a_tag['href'])
+                    # lit.append(a_tag['href'])
                     return a_tag['href']
     except requests.RequestException as e:
         print(f"Request failed for URL {link}: {e}")
@@ -55,5 +54,5 @@ df['Scraped_Links'] = scraped_hrefs
 # Save the updated dataframe to a new Excel file
 output_file_path = 'abstract_links.xlsx'  # Update with your desired output file path
 df.to_excel(output_file_path, index=False)
-print(lit)
+# print(lit)
 print("Scraping completed and saved to the new Excel file.")
