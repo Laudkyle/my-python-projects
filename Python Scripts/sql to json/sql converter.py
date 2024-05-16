@@ -1,25 +1,28 @@
-import requests
-from bs4 import BeautifulSoup
+import sqlite3
+import json
 
-# Send a GET request to the URL
-url = "https://scholar.ucc.edu.gh/publications"
-response = requests.get(url)
+# Connect to the SQLite database
+conn = sqlite3.connect('towncraft.db')
+cursor = conn.cursor()
 
-# Parse the HTML content
-soup = BeautifulSoup(response.content, 'html.parser')
+# Execute a SQL query to retrieve data
+cursor.execute('SELECT * FROM averagedistance')
 
-# Find all table rows
-rows = soup.find_all('datatable-body-row')
+# Fetch all rows from the result set
+rows = cursor.fetchall()
 
-# Open a file for writing
-with open('output.txt', 'w') as f:
-    # Loop through each row and extract title and link
-    for row in rows:
-        link_element = row.find('a', class_='show-ellipsis small')
-        title = link_element['title']
-        link = link_element['href']
-        f.write("Title: {}\n".format(title))
-        f.write("Link: {}\n".format(link))
-        f.write("\n")  # Add a newline between entries
+# Convert data to JSON format
+data = []
+for row in rows:
+    data.append({
+        'column1': row[0],
+        'column2': row[1],
+        # Add more columns as needed
+    })
 
-print("Data has been written to output.txt file.")
+# Write JSON data to file
+with open('data.json', 'w') as f:
+    json.dump(data, f, indent=4)
+
+# Close the database connection
+conn.close()
