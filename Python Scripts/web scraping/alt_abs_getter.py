@@ -13,7 +13,7 @@ def scrape_href(link):
     try:
         response = requests.get(link, timeout=10)  # Added timeout for better handling
         if response.status_code == 200:
-            soup = BeautifulSoup(response.content[-2000:], 'html.parser')
+            soup = BeautifulSoup(response.content, 'html.parser')
             # Print the response content for debugging
             print(f"Scraping URL: {link}")
             print(response.content[:1000])  # Print the first 1000 characters of the content
