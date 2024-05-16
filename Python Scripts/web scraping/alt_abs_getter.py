@@ -7,21 +7,23 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 # Load the CSV file
 file_path = 'publications.csv'  # Update with your file path
 df = pd.read_csv(file_path)
-df =df.head(10)
-lit=[]
+df =df.head()
 # Function to scrape href links
 def scrape_href(link):
     try:
         response = requests.get(link, timeout=10)  # Added timeout for better handling
         if response.status_code == 200:
-            soup = BeautifulSoup(response.content, 'html.parser')
+            soup = BeautifulSoup(response.content[-2000:], 'html.parser')
+            # Print the response content for debugging
+            print(f"Scraping URL: {link}")
+            print(response.content[:1000])  # Print the first 1000 characters of the content
+
             # Find the specific div tag with id 'gsc_oci_title'
             div_tag = soup.find('div', {'id': 'gsc_oci_title'})
             if div_tag:
                 # Find the a tag within this div
                 a_tag = div_tag.find('a', {'class': 'gsc_oci_title_link'})
                 if a_tag and 'href' in a_tag.attrs:
-                    lit.append(a_tag['href'])
                     return a_tag['href']
     except requests.RequestException as e:
         print(f"Request failed for URL {link}: {e}")
@@ -54,5 +56,5 @@ df['Scraped_Links'] = scraped_hrefs
 # Save the updated dataframe to a new Excel file
 output_file_path = 'abstract_links.xlsx'  # Update with your desired output file path
 df.to_excel(output_file_path, index=False)
-print(lit)
+
 print("Scraping completed and saved to the new Excel file.")
