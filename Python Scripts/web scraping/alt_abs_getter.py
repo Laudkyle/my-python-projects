@@ -7,16 +7,17 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 # Load the CSV file
 file_path = 'publications.csv'  # Update with your file path
 df = pd.read_csv(file_path)
-df =df.head()
+df =df.head(200)
 # Function to scrape href links
 def scrape_href(link):
     try:
-        response = requests.get(link, timeout=10)  # Added timeout for better handling
-        if response.status_code == 200:
+        response = requests.get(link, timeout=10,headers = {'User-agent': 'bot 0.1'})  # Added timeout for better handling
+        print(response.status_code)
+        if response.status_code == 429:
+            print(response.headers["Retry-After"])
+            time.sleep(int(response.headers["Retry-After"]))
+        elif response.status_code == 200:
             soup = BeautifulSoup(response.content, 'html.parser')
-            # Print the response content for debugging
-            print(f"Scraping URL: {link}")
-            print(response.content[:1000])  # Print the first 1000 characters of the content
 
             # Find the specific div tag with id 'gsc_oci_title'
             div_tag = soup.find('div', {'id': 'gsc_oci_title'})
