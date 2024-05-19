@@ -10,3 +10,5 @@ print(brand == s_brand)
 print(brand != s_brand)
 print("create" in brand)# Checking for the presence of a particular text in a string
 print("create" not in brand)# Checking for the abscence of a particular text in a string
+
+brand.isnum
